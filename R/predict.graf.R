@@ -2,7 +2,7 @@ predict.graf <-
 function(object, newdata = NULL, type = c('response', 'latent'),
                          CI = 0.95, maxn = NULL, ...) {
   
-  if (class(newdata) %in% c('Raster', 'RasterBrick', 'RasterStack')) {
+  if (inherits(newdata, c('Raster', 'RasterBrick', 'RasterStack'))) {
   
     # predict to a raster
     ans <- predict.graf.raster(object = object,
@@ -29,7 +29,7 @@ function(object, newdata = NULL, type = c('response', 'latent'),
     # convert any ints to numerics
 	for(i in 1:ncol(newdata)) if (is.integer(newdata[, i])) newdata[, i] <- as.numeric(newdata[, i])
 	
-    if (is.data.frame(newdata) & all(sapply(object$obsx, class) == sapply(newdata, class))) {
+    if (is.data.frame(newdata) & all(sapply(object$obsx, function(x) class(x)[1]) == sapply(newdata, function(x) class(x)[1]))) {
 	
 	  # get mean on raw data
 	  mn <- object$mnfun(newdata)

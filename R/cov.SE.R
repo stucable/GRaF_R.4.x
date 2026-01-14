@@ -62,7 +62,7 @@ cov.SE <- function(x1, x2 = NULL, e1 = NULL, e2 = NULL, l) {
       K <- exp(-0.5 * sumdiffs)  # to matrix?
   }
   
-  if(class(sumdiffs) == 'dist') {
+  if(inherits(sumdiffs, 'dist')) {
     K <- as.matrix(K)
     diag(K) <- 1
   }
