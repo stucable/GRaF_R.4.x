@@ -1,5 +1,7 @@
 # GRaF (R ≥ 4.x compatible fork)
 
+[![R-CMD-check](https://github.com/stucable/GRaF_R.4.x/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stucable/GRaF_R.4.x/actions/workflows/R-CMD-check.yaml)
+
 This is an **unofficial fork** of [GRaF](https://github.com/goldingn/GRaF), the R package by **Nick Golding** that fits species distribution models with Gaussian processes (Gaussian random fields). It is not endorsed by the original author. The method, the model code and the copyright remain Nick Golding's. This fork changes only the code needed to run on current versions of R.
 
 ## Why this fork exists
