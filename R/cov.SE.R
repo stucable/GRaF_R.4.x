@@ -62,6 +62,7 @@ cov.SE <- function(x1, x2 = NULL, e1 = NULL, e2 = NULL, l) {
       K <- exp(-0.5 * sumdiffs)  # to matrix?
   }
   
+  # Modified 2026-01 (S. Cable): was class(sumdiffs) == 'dist', an error in R >= 4.2
   if(inherits(sumdiffs, 'dist')) {
     K <- as.matrix(K)
     diag(K) <- 1

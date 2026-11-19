@@ -2,6 +2,7 @@ predict.graf <-
 function(object, newdata = NULL, type = c('response', 'latent'),
                          CI = 0.95, maxn = NULL, ...) {
   
+  # Modified 2026-01 (S. Cable): was class(newdata) %in% ...; inherits() is the robust test
   if (inherits(newdata, c('Raster', 'RasterBrick', 'RasterStack'))) {
   
     # predict to a raster
@@ -29,6 +30,7 @@ function(object, newdata = NULL, type = c('response', 'latent'),
     # convert any ints to numerics
 	for(i in 1:ncol(newdata)) if (is.integer(newdata[, i])) newdata[, i] <- as.numeric(newdata[, i])
 	
+    # Modified 2026-01 (S. Cable): compare first class only; multi-class columns (e.g. ordered factors) broke the comparison
     if (is.data.frame(newdata) & all(sapply(object$obsx, function(x) class(x)[1]) == sapply(newdata, function(x) class(x)[1]))) {
 	
 	  # get mean on raw data
