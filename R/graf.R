@@ -91,7 +91,6 @@ graf <-
     
     fit$mnfun = mnfun
     fit$obsx <- obsx
-    fit$obsy <- y  # Added: ensure the obsy slot is always set for print.graf compatibility!
     fit$facs <- facs
     fit$hessian <- hessian
     fit$scaling <- scaling

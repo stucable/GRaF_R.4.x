@@ -1,0 +1,20 @@
+citHeader("To cite GRaF in publications, please cite the method paper:")
+
+bibentry(
+  bibtype  = "Article",
+  title    = "Fast and flexible Bayesian species distribution modelling using Gaussian processes",
+  author   = c(person("Nick", "Golding"), person("Bethan V.", "Purse")),
+  journal  = "Methods in Ecology and Evolution",
+  year     = "2016",
+  volume   = "7",
+  number   = "5",
+  pages    = "598--608",
+  doi      = "10.1111/2041-210X.12523",
+  textVersion = paste(
+    "Golding, N. and Purse, B. V. (2016) Fast and flexible Bayesian species",
+    "distribution modelling using Gaussian processes.",
+    "Methods in Ecology and Evolution, 7(5), 598-608.",
+    "https://doi.org/10.1111/2041-210X.12523")
+)
+
+citFooter("If you used this R >= 4.x compatible fork (GRaF 0.1-15.1, https://github.com/stucable/GRaF_R.4.x), please also state this in your methods so that the software version can be identified.")
