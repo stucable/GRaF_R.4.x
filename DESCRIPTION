@@ -1,12 +1,19 @@
 Package: GRaF
 Type: Package
 Title: Species Distribution Modelling using Gaussian Processes
-Version: 0.1-15
-Date: 2017-02-27
-Author: Nick Golding 
-Maintainer: Stuart Cable <s.cable@kew.org>
-Description: Functions to fit, visualise and compare Gaussian process species distribution models.
-BugReports: https://github.com/goldingn/GRaF/issues
+Version: 0.1-15.1
+Date: 2026-11-19
+Authors@R: c(
+    person("Nick", "Golding", role = c("aut", "cph"),
+           email = "nick.golding.research@gmail.com"),
+    person("Stuart", "Cable", role = c("ctb", "cre"),
+           email = "s.cable@kew.org",
+           comment = "Maintainer of the R >= 4.x compatible fork"))
+Description: Functions to fit, visualise and compare Gaussian process species
+    distribution models. This is an unofficial fork of goldingn/GRaF 0.1-15
+    with fixes for R >= 4.2; the method and original code are by Nick Golding.
+URL: https://github.com/stucable/GRaF_R.4.x, https://github.com/goldingn/GRaF
+BugReports: https://github.com/stucable/GRaF_R.4.x/issues
 License: GPL (>= 2)
 Suggests: dismo
 Imports: memoise, raster
